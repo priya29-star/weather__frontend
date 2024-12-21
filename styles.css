@@ -1,0 +1,265 @@
+/* Reset some basic elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #3498db;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Search Section */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #2980b9;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #2980b9;
+}
+
+
+/* Weather Info Section */
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.weather-info .current-weather {
+  text-align: center;
+}
+
+.weather-info .current-weather h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2980b9;
+}
+
+.weather-info .current-weather p {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.weather-info .current-weather .temperature {
+  font-size: 4rem;
+  color: #e74c3c;
+}
+
+.weather-info .current-weather img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-info .details {
+  text-align: left;
+}
+
+.weather-info .details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2980b9;
+}
+
+.weather-info .details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.weather-info .details ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Forecast Section */
+.forecast {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.forecast .forecast-card {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast .forecast-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.forecast .forecast-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.forecast .forecast-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast .forecast-card .temp {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.forecast .forecast-card .temp-low {
+  font-size: 1.2rem;
+  color: #3498db;
+}
+.favorites {
+  margin-top: 20px;
+}
+
+.favorites h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#favoritesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#favoritesList li {
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #0aebff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#favoritesList li:hover {
+  background-color: #0d0202;
+}
+
+.remove-btn {
+  background-color: rgb(2, 0, 0);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: rgb(22, 2, 2);
+}
+
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .weather-info {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .weather-info .details {
+      margin-top: 20px;
+  }
+
+  .forecast {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-info {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .forecast {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-bar input {
+      width: 200px;
+  }
+
+  .search-bar button {
+      padding: 8px 12px;
+  }
+
+  .weather-info .current-weather img {
+      width: 80px;
+      height: 80px;
+  }
+}

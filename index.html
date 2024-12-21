@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Weather Dashboard</h1>
+            <p>Check the current weather and the 5-day forecast.</p>
+        </div>
+
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn">Search</button>
+        </div>
+        <!-- Add this right below the search bar -->
+      
+      
+               
+
+        <!-- Current Weather Info Section -->
+        <div class="weather-info">
+            <div class="current-weather">
+                <h2 id="cityName">City Name</h2>
+                <p id="weatherCondition">Weather Condition</p>
+                <p class="temperature" id="temperature">--°C</p>
+                <img id="weatherIcon" src="" alt="Weather Icon">
+            </div>
+
+            <!-- Weather Details Section -->
+            <div class="details">
+                <h3>Details</h3>
+                <ul>
+                    <li><strong>Humidity:</strong> <span id="humidity">--</span>%</li>
+                    <li><strong>Wind Speed:</strong> <span id="windSpeed">--</span> km/h</li>
+                    <li><strong>Pressure:</strong> <span id="pressure">--</span> hPa</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div class="forecast">
+            <div class="forecast-card">
+                <h4>Day 1</h4>
+                <img src="" alt="Day 1 Icon" id="forecastDay1Icon">
+                <p class="temp" id="forecastDay1Temp">--°C</p>
+                <p class="temp-low" id="forecastDay1Low">--°C</p>
+            </div>
+
+            <div class="forecast-card">
+                <h4>Day 2</h4>
+                <img src="" alt="Day 2 Icon" id="forecastDay2Icon">
+                <p class="temp" id="forecastDay2Temp">--°C</p>
+                <p class="temp-low" id="forecastDay2Low">--°C</p>
+            </div>
+
+            <div class="forecast-card">
+                <h4>Day 3</h4>
+                <img src="" alt="Day 3 Icon" id="forecastDay3Icon">
+                <p class="temp" id="forecastDay3Temp">--°C</p>
+                <p class="temp-low" id="forecastDay3Low">--°C</p>
+            </div>
+
+            <div class="forecast-card">
+                <h4>Day 4</h4>
+                <img src="" alt="Day 4 Icon" id="forecastDay4Icon">
+                <p class="temp" id="forecastDay4Temp">--°C</p>
+                <p class="temp-low" id="forecastDay4Low">--°C</p>
+            </div>
+
+            <div class="forecast-card">
+                <h4>Day 5</h4>
+                <img src="" alt="Day 5 Icon" id="forecastDay5Icon">
+                <p class="temp" id="forecastDay5Temp">--°C</p>
+                <p class="temp-low" id="forecastDay5Low">--°C</p>
+            </div>
+        </div>
+            <!-- Favorite Cities Section -->
+        <div class="favorites">
+            <h3>Your Favorite Cities</h3>
+            <button id="addFavoriteBtn" style="display:none;">Add to Favorites</button>
+
+            <ul id="favoritesList">
+                <!-- Favorite cities will be listed here -->
+            </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>Weather data provided by OpenWeatherMap API</p>
+        </div>
+
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
